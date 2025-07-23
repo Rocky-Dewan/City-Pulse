@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Classes */
+.input {
+  @apply w-full px-4 py-2 border rounded-md;
+}
+
+.btn {
+  @apply w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600;
+}
