@@ -1,4 +1,4 @@
-// ✅ Admin Dashboard for Status Management + Location-based filtering + Map Markers
+
 
 import { useEffect, useState } from "react";
 import api from "../api/api";
@@ -136,6 +136,3 @@ export default function AdminDashboard() {
   );
 }
 
-// ✅ Admin Dashboard is functional
-// ✅ Location-based filtering by user coordinates
-// ✅ Map integration with markers showing each report
