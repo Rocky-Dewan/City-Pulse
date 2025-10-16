@@ -7,7 +7,7 @@ export default function ProtectedRoute({ children, adminOnly = false }) {
   const token = getToken();
   if (!token) return <Navigate to="/login" replace />;
 
-
+  // Safety: validate decode and optional expiry
   try {
     if (isTokenExpired(token)) {
       // token expired: force logout
