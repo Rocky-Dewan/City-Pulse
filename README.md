@@ -111,8 +111,9 @@ citypulse/
 
 ### 1. Clone the repo
 
-git clone https://github.com/Rocky-Dewan/City-Pulse.git
-cd citypulse
+-git clone https://github.com/Rocky-Dewan/City-Pulse.git
+
+-cd citypulse
 
 2. Set up Backend
 cd citypulse-backend
@@ -155,6 +156,7 @@ Google OAuth integration
 ---
 
 Let me know if you want this tailored for a Bengali audience, deployed version, or connected with a mobile app!
+
 
 
 
