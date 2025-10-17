@@ -4,11 +4,6 @@ CityPulse is a full-stack MERN (MongoDB, Express, React, Node.js) web applicatio
 
 ---
 
-## 🌐 Live Demo
-
-> Coming soon...
-
----
 
 ## 🧰 Tech Stack
 
@@ -116,7 +111,7 @@ citypulse/
 
 ### 1. Clone the repo
 
-git clone https://github.com/your-username/citypulse.git
+[git clone https://github.com/your-username/citypulse.git](https://github.com/Rocky-Dewan/City-Pulse.git)
 cd citypulse
 
 2. Set up Backend
@@ -160,4 +155,5 @@ Google OAuth integration
 ---
 
 Let me know if you want this tailored for a Bengali audience, deployed version, or connected with a mobile app!
+
 
