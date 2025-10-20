@@ -131,13 +131,29 @@ export default function Home() {
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="p-2 rounded-lg bg-white/10 text-white outline-none focus:ring-2 focus:ring-purple-400"
+          className="p-2 rounded-lg bg-gray-800/80 text-gray-200 outline-none border border-gray-600 focus:ring-2 focus:ring-purple-400 focus:border-purple-400 transition-all appearance-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(31,41,55,0.95), rgba(17,24,39,0.95))",
+          }}
         >
-          <option value="all">All categories</option>
-          <option value="road">Road</option>
-          <option value="waste">Waste</option>
-          <option value="lighting">Lighting</option>
+          <option value="all" className="bg-gray-800 text-gray-200 hover:bg-blue-500">
+            All Categories
+          </option>
+          <option value="road" className="bg-gray-800 text-gray-200 hover:bg-blue-500">
+            Road
+          </option>
+          <option value="waste" className="bg-gray-800 text-gray-200 hover:bg-blue-500">
+            Waste
+          </option>
+          <option
+            value="lighting"
+            className="bg-gray-800 text-gray-200 hover:bg-blue-500"
+          >
+            Lighting
+          </option>
         </select>
+
         <div className="flex items-center gap-2">
           <label className="text-sm">{radiusKm} km radius</label>
           <input
