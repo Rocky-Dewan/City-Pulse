@@ -30,7 +30,7 @@ export default function Signup() {
     city: "",
     gender: "",
     age: "",
-    location: "",
+    division: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -103,7 +103,7 @@ export default function Signup() {
             <CustomInput label="Phone Number" name="phone" value={form.phone} onChange={handleChange} />
           </div>
 
-          <CustomInput label="Division" name="Division" value={form.location} onChange={handleChange} />
+          <CustomInput label="Division" name="division" value={form.location} onChange={handleChange} />
           <CustomInput label="City" name="city" value={form.city} onChange={handleChange} />
 
           <CustomInput label="Address" name="address" value={form.address} onChange={handleChange} className="md:col-span-2" />
