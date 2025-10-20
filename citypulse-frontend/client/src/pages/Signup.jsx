@@ -78,7 +78,7 @@ export default function Signup() {
         className="backdrop-blur-lg bg-gray-800/70 p-8 rounded-3xl shadow-2xl w-full max-w-2xl border border-gray-700"
       >
         <h1 className="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-pink-400">
-          Create Your CityPulse Account-
+          Create Your CityPulse Account
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -103,9 +103,12 @@ export default function Signup() {
             <CustomInput label="Phone Number" name="phone" value={form.phone} onChange={handleChange} />
           </div>
 
-          <CustomInput label="Address" name="address" value={form.address} onChange={handleChange} className="md:col-span-2" />
+          <CustomInput label="Division" name="Division" value={form.location} onChange={handleChange} />
           <CustomInput label="City" name="city" value={form.city} onChange={handleChange} />
-          <CustomInput label="Location" name="location" value={form.location} onChange={handleChange} />
+
+          <CustomInput label="Address" name="address" value={form.address} onChange={handleChange} className="md:col-span-2" />
+
+
           <CustomInput label="Age" name="age" type="number" value={form.age} onChange={handleChange} />
 
           <div className="flex items-center justify-between md:col-span-2 text-sm">
