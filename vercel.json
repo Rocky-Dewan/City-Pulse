@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd citypulse/citypulse-frontend && npm run build",
-  "outputDirectory": "citypulse/citypulse-frontend/build",
-  "installCommand": "cd citypulse/citypulse-frontend && npm install"
+  "buildCommand": "cd citypulse-frontend && npm run build",
+  "outputDirectory": "citypulse-frontend/build",
+  "installCommand": "cd citypulse-frontend && npm install"
 }
