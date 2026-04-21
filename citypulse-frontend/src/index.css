@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Resets ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #0d0d14;
+  color: #e2e2f0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #16161f; }
+::-webkit-scrollbar-thumb { background: #2a2a3d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #f97316; }
+
+/* ── Custom Components ────────────────────────────────────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply bg-city-orange hover:bg-city-orange-dim text-white font-display font-semibold
+           px-6 py-3 rounded-lg transition-all duration-200
+           hover:shadow-orange-glow active:scale-95 focus:outline-none
+           focus:ring-2 focus:ring-city-orange focus:ring-offset-2 focus:ring-offset-city-bg;
+  }
+
+  .btn-secondary {
+    @apply bg-city-card hover:bg-city-border text-city-text font-display font-semibold
+           px-6 py-3 rounded-lg border border-city-border transition-all duration-200
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-city-orange
+           focus:ring-offset-2 focus:ring-offset-city-bg;
+  }
+
+  .btn-ghost {
+    @apply text-city-subtext hover:text-city-text font-body font-medium
+           px-4 py-2 rounded-lg transition-colors duration-200
+           hover:bg-city-card focus:outline-none;
+  }
+
+  .input-field {
+    @apply w-full bg-city-card border border-city-border text-city-text placeholder-city-muted
+           rounded-lg px-4 py-3 font-body text-sm
+           focus:outline-none focus:border-city-orange focus:ring-1 focus:ring-city-orange
+           transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-city-card border border-city-border rounded-xl p-6 shadow-card;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium;
+  }
+
+  .section-title {
+    @apply font-display text-2xl font-bold text-city-text;
+  }
+
+  .page-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+}
+
+/* ── Background grid texture ─────────────────────────────────────────────── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(249,115,22,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249,115,22,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Glow effects ──────────────────────────────────────────────────────────── */
+.text-glow {
+  text-shadow: 0 0 20px rgba(249,115,22,0.5);
+}
+
+.orange-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f97316;
+  box-shadow: 0 0 6px rgba(249,115,22,0.8);
+  animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+
+/* ── Stagger animations ───────────────────────────────────────────────────── */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.10s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.20s; }
+.stagger-5 { animation-delay: 0.25s; }
+
+.animate-fade-in { animation: fadeIn 0.4s ease both; }
+.animate-slide-up { animation: slideUp 0.4s ease both; }
+
+@keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── File upload drag zone ────────────────────────────────────────────────── */
+.drop-zone {
+  border: 2px dashed #2a2a3d;
+  transition: all 0.2s ease;
+}
+.drop-zone.active {
+  border-color: #f97316;
+  background: rgba(249,115,22,0.05);
+}
